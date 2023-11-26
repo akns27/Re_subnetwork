@@ -100,8 +100,3 @@ window.onload = function () {
 };
 
 
-window.onload = function () {
-  getLocation();
-  updateDustLevelStatus();
-};
-
