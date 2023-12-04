@@ -83,11 +83,11 @@ function updateDustLevelStatus() {
   if (dustLevel >= 10 && dustLevel <= 30) {
     dustLevelStatus.textContent = "좋음";
     dustLevelStatus.className = "good";
-    window.location.href = "https://akns27.github.io/network_backup/";
+    window.location.href = "http://10.129.57.172:5000";
   } else if (dustLevel >= 31 && dustLevel <= 80) {
     dustLevelStatus.textContent = "보통";
     dustLevelStatus.className = "moderate";
-    window.location.href = "https://akns27.github.io/network_backup/";
+    window.location.href = "http://10.129.57.172:5000";
   } else if (dustLevel >= 81 && dustLevel <= 150) {
     dustLevelStatus.textContent = "나쁨";
     dustLevelStatus.className = "poor";
