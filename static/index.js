@@ -72,6 +72,8 @@ function updateNeighborhoodName(neighborhoodName) {
 // 오류 처리 함수
 function showError(error) {
   // 오류 처리 로직
+  console.log("Error in getting geolocation: ", error);
+  updateNeighborhoodName('대저동'); // 위치 정보를 가져오는데 실패한 경우 '대저동'으로 설정
 }
 
 function updateDustLevelStatus() {
@@ -93,9 +95,18 @@ function updateDustLevelStatus() {
     dustLevelStatus.textContent = "매우 나쁨";
     dustLevelStatus.className = "very-poor";
   }
+  else {
+    // 데이터가 없거나 읽을 수 없는 값인 경우
+    dustLevelStatus.textContent = "데이터를 읽을 수 없음";
+    dustLevelStatus.className = "unknown";
+  }
 }
+
+// 페이지가 로드되면 상태를 업데이트합니다.
+window.addEventListener('DOMContentLoaded', (event) => {
+  updateDustLevelStatus();
+});
 
 window.onload = function () {
   getLocation();
-  updateDustLevelStatus();
 };
