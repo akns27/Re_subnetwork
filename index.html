@@ -24,13 +24,7 @@
       <div class="dust-level-text">현재 미세먼지 농도</div>
     </div>
     <div class="dust-level-container">
-      <div id="dustLevel" class="dust-level-value">
-        <!-- 백엔드에서 가져온 데이터의 첫 번째 요소를 표시합니다. -->
-        {% if data %}
-          {{ data[0].pm10Value }}
-        {% else %}
-          데이터가 없습니다.
-        {% endif %}
+      <div id="dustLevel" class="dust-level-value">150
       </div>
       <div id="dustLevelStatus" class="dust-level-status"></div>
     </div>
